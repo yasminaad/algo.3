@@ -1,0 +1,38 @@
+//soltuion 1 with procedure 
+
+PROCEDURE dot_product()
+VAR
+ ps:INTEGER:=0;
+ i:integer;
+ V1 : ARRAY_OF integer[n];
+ V2 : ARRAY_OF integer[n];
+    
+BEGIN
+
+FOR i FROM 0 TO n-1 STEP 1  DO 
+   ps+= v1[i]*  v2[i];  
+   END_FOR
+   write (ps)
+END
+
+
+ALGORITHM dot_pro()
+VAR
+ i:integer; 
+ tab : ARRAY_OF integer[n];
+     
+BEGIN
+FOR i FROM 0 TO n-1 STEP 1  DO
+  
+    IF (v1[i] * v2[i]==0) THEN
+     dot_product()
+    Else 
+     write ("not ortho")
+     END_IF
+     
+END
+
+//soltuion2 with fonction
+
+
+
