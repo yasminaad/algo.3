@@ -15,15 +15,22 @@ FOR i FROM 0 TO n-1 STEP 1  DO
    write (ps)
 END
 
-
-ALGORITHM dot_pro()
+PROCEDURE read_tab(n:INTEGER,VAR tab_v: array_of INTEGER)
+VAR
+    i:INTEGER;
+BEGIN
+    FOR i FROM 0 TO n-1  DO
+        read (tab_v[i]);
+        i:=i+1;
+    END_FOR
+END
+ALGORITHM dot_pro(n:INTEGER)
 VAR
  i:integer; 
- tab : ARRAY_OF integer[n];
-     
+    
 BEGIN
-FOR i FROM 0 TO n-1 STEP 1  DO
-  
+FOR i FROM 0 TO n-1  DO
+   read_tab(n,tab_v)  
     IF (v1[i] * v2[i]==0) THEN
      dot_product()
     Else 
@@ -35,4 +42,16 @@ END
 //soltuion2 with fonction
 
 
+FUNCTION dot_product() : INTEGER
+VAR
+ ps:INTEGER:=0;
+ i:integer;
+ V1 : ARRAY_OF integer[n];
+ V2 : ARRAY_OF integer[n];
+BEGIN
+FOR i FROM 0 TO n-1 STEP 1  DO 
+   ps+= v1[i] *  v2[i];  
+   END_FOR
 
+    RETURN ps ;
+END
